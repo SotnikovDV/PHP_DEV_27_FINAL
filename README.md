@@ -9,7 +9,7 @@ A simple application for organizing and accounting for the relationship between 
 
 ## Implemented:
 
-PHP version 8.1 + Laravel 8.83
+PHP version 8.1 + Laravel 8.83 + MySQL (MariaDB) 10.4.27
 
 Developed as a practical task in the course "PHP Developer"
 
@@ -32,16 +32,17 @@ Developed as a practical task in the course "PHP Developer"
 - npm run prod
 ```
 
-4. Through php artisan create a new app key (the value of the 'key' parameter in config/application.php needs to be cleared first):
+4. Through php artisan create a new app key (the value of the 'APP_KEY' parameter in .env needs to be cleared first):
 ``` bash
 - php artisan key:generate
 ```
+5. Create a database for the site
 
-5. Create an .env settings file similar to .env.example and specify the database connection parameters in it.
+6. Create an .env settings file similar to .env.example and specify the database connection parameters in it.
 
-6. Change passwords for users in database/seeders/UserSeeder.php
+7. Change passwords for users in /database/seeders/UserSeeder.php
 
-7. Perform database migrations and seeding:
+8. Perform database migrations and seeding:
 ``` bash
 - php artisan migrate --seed
 ```
