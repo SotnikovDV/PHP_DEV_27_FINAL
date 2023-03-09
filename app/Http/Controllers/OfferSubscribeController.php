@@ -25,7 +25,8 @@ class OfferSubscribeController extends Controller
         $subscribe->offer_id = $offer->id;
         $subscribe->webmaster_id = Auth::id();
         $subscribe->save();
-        return redirect()->route('offers.index');
+        return redirect()->route('subscribes.show', $subscribe);
+        //return redirect()->route('offers.index');
     }
     public function update(UpdateSubscribeRequest $request, Offer $offer)
     {
